@@ -28,7 +28,8 @@ class explanationWindow():
 
 		# Scroll bar function
 		def scrollFunc(event):
-			canvas.configure(scrollregion=canvas.bbox("all"), width=360, height=500)
+			canvas_height = event.height
+			canvas.configure(scrollregion=canvas.bbox("all"), height=canvas_height)
 
 		scrollbar.pack(side="right", fill="y")
 		canvas.pack(side="left")
